@@ -35,13 +35,24 @@ namespace CapaDatos
             SqlConnection cadena = new SqlConnection();
             try
             {
+                // creamos la cadena de conexion
+                cadena.ConnectionString = "Server=" + this.Servidor + "; Database=" + this.Base + ";";
 
+                if (this.Seguridad)
+                {
+                    cadena.ConnectionString = cadena.ConnectionString + "Integrate Security = SSPI";
+                }
+                else
+                {
+                    cadena.ConnectionString = cadena.ConnectionString + "User Id=" + this.Usuario + ";Password=" + this.Clave;
+                }
             }
             catch (Exception ex)
             {
-
-                throw;
+                cadena =  null;
+                throw ex; // aqui mostramos un mensaje por el erro de la conexion a BD
             }
+            return cadena;
         }
     }
 }
