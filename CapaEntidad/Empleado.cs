@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaEntidad
 {
-    class Empleado
+    public class Empleado
     {
         // Debemos agregar las propiedades deacuerdo a la cantidad de variables de la tabla de la BD
         

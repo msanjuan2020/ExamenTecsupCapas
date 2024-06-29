@@ -54,5 +54,15 @@ namespace CapaDatos
             }
             return cadena;
         }
+
+        // crear un metodo para generar una instancia al contructor dentro de esta clase
+        public static Conexion crearInstancia()
+        {
+            if (con == null)
+            {
+                con = new Conexion();
+            }
+            return con;
+        }
     }
 }
