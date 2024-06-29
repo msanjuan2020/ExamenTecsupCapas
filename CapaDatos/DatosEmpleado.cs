@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CapaDatos
 {
-    class DatosEmpleado
+    public class DatosEmpleado
     {
         // primero creamos un metodo para listar a los empleados de la tabla de la bd
         public DataTable Listar()
