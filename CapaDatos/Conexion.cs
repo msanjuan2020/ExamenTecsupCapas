@@ -25,7 +25,7 @@ namespace CapaDatos
             this.Servidor = "TLK1762-MARLONA\\SQLEXPRESS";
             this.Usuario = "sa";
             this.Clave = "1802Maximo";
-            this.Seguridad = true;
+            this.Seguridad = false;
         }
 
         // Generamos un metodo publico para generar el string de conexion

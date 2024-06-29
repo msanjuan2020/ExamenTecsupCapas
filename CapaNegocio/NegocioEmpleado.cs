@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Runtime.Remoting.Messaging;
-using System.Text;
-using System.Threading.Tasks;
-using CapaDatos;
 using CapaEntidad;
+using CapaDatos;
 
 namespace CapaNegocio
 {
@@ -16,11 +11,16 @@ namespace CapaNegocio
         // método para listar Empleados
         public static DataTable ListarEmpleado()
         {
-            DatosEmpleado datosEmpleado = new DatosEmpleado();
-            return datosEmpleado.Listar();
+            DatosEmpleado dato = new DatosEmpleado();
+            return dato.Listar();
         }
 
         // meétodo para buscar a los Empleados
+        public static DataTable BuscarEmpleado(string nombre)
+        {
+            DatosEmpleado dato = new DatosEmpleado();
+            return dato.Buscar(nombre);
+        }
 
         // método para insertar a los Empleados
 
